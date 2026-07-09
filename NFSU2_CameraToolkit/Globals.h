@@ -75,7 +75,6 @@ namespace Globals
 
 	inline bool DrawUI = false;
 	inline bool CameraOverride = false;
-	inline bool GameSpeedOverride = false;
 
 	inline float UIScale = 1.0f;
 	extern Hotkeys HK;

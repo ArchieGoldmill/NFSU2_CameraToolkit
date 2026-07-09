@@ -87,14 +87,13 @@ void HandleKeyDownInput(int wParam)
 
 		if (KeyPressedOnce(wParam, Globals::HK.PauseGame))
 		{
-			Globals::GameSpeedOverride = !Globals::GameSpeedOverride;
-			if (Globals::GameSpeedOverride)
+			if (Game::Speed != 1)
 			{
-				Game::Speed = 0;
+				Game::Speed = 1;
 			}
 			else
 			{
-				Game::Speed = 1;
+				Game::Speed = 0.01;
 			}
 		}
 

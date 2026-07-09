@@ -41,24 +41,14 @@ namespace UI::Misc
 			{
 				ImGui::TableSetColumnIndex(0);
 				{
-					DrawCheckBox("Override game speed", &Globals::GameSpeedOverride);
+					ImGui::Text("");
+					ImGui::SliderFloat("Steer angle", Game::FrontSteerAngle, -60.0, 60.0, "%.f");
 				}
 
 				ImGui::TableSetColumnIndex(1);
 				{
-					ImGui::BeginDisabled(!Globals::GameSpeedOverride);
 					ImGui::Text("");
-					ImGui::SliderFloat("Game speed", &Game::Speed, 0.0f, 1.0f, "%.3f");
-					ImGui::EndDisabled();
-				}
-			}
-
-			ImGui::TableNextRow();
-			{
-				ImGui::TableSetColumnIndex(0);
-				{
-					ImGui::Text("");
-					ImGui::SliderFloat("Steer angle", Game::FrontSteerAngle, -60.0, 60.0, "%.f");
+					ImGui::SliderFloat("Game speed", &Game::Speed, 0.01f, 1.0f, "%.3f");
 				}
 			}
 

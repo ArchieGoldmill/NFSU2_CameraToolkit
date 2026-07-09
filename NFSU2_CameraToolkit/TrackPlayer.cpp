@@ -97,7 +97,6 @@ bool Track::Play()
 	if (canPlay)
 	{
 		Globals::CameraOverride = true;
-		Globals::GameSpeedOverride = true;
 		Globals::gCameraMode = this->cameraMode;
 	}
 
@@ -124,7 +123,6 @@ TrackNode Track::Update()
 			resultNode.Speed = nodes[this->currentNode + 1]->Speed;
 			if (resultNode.Speed)
 			{
-				Globals::GameSpeedOverride = false;
 				Game::Speed = 1;
 			}
 
