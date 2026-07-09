@@ -10,7 +10,7 @@ namespace Game
 {
 	inline auto Device = (LPDIRECT3DDEVICE9*)0x00870974;
 	inline auto& Window = *(HWND*)0x00870990;
-	inline auto DrawFE = (bool*)0x007FEE40;
+	inline auto DrawFE = true;
 	inline auto ForceRain = (bool*)0x008A1D38;
 	inline auto& Speed = *(float*)0x007A5730;
 	inline auto FrontSteerAngle = (float*)0x007F45A4;

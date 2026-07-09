@@ -26,7 +26,7 @@ namespace UI::Misc
 
 				ImGui::TableSetColumnIndex(1);
 				{
-					DrawCheckBox("Draw HUD", Game::DrawFE);
+					DrawCheckBox("Draw HUD", &Game::DrawFE);
 				}
 
 				ImGui::TableSetColumnIndex(2);

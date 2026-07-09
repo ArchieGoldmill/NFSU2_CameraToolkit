@@ -125,7 +125,7 @@ void HandleKeyDownInput(int wParam)
 
 	if (KeyPressedOnce(wParam, Globals::HK.ToggleHUD))
 	{
-		*Game::DrawFE ^= true;
+		Game::DrawFE ^= true;
 	}
 
 	Globals::SetKeyPressed(wParam, true);

@@ -216,6 +216,8 @@ void Init()
 	MH_CreateHook((LPVOID)0x00447280, hSetCameraMatrix, (LPVOID*)&oSetCameraMatrix);
 
 	MH_EnableHook(MH_ALL_HOOKS);
+
+	injector::WriteMemory<bool*>(0x005378C1, &Game::DrawFE);
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID)
