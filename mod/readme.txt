@@ -1,4 +1,4 @@
-Need for Speed: Most Wanted - Camera Toolkit 1.0
+Need for Speed: Underground 2 - Camera Toolkit 1.0
 
 The tool to control in-game camera and its various features.
 
@@ -12,7 +12,7 @@ Features:
 - Hide in-game HUD to make clean shots.
 
 How to install:
-1. Drop scripts folder to the game root folder.
+Drop scripts folder to the game root folder.
 
 Default Hotkeys:
 Toggle UI - F1
