@@ -3,7 +3,6 @@
 #include "Globals.h"
 #include "Utilities.h"
 #include "Game.h"
-#include "TimeOfDay.h"
 #include "FEManager.h"
 
 namespace UI::Misc

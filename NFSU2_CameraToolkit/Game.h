@@ -10,12 +10,10 @@ namespace Game
 {
 	inline auto Device = (LPDIRECT3DDEVICE9*)0x00870974;
 	inline auto& Window = *(HWND*)0x00870990;
-	//inline auto EnableInput = (bool*)0x00920DE0;
 	inline auto DrawFE = (bool*)0x007FEE40;
 	inline auto ForceRain = (bool*)0x008A1D38;
 	inline auto& Speed = *(float*)0x007A5730;
 	inline auto FrontSteerAngle = (float*)0x007F45A4;
-	//inline auto DrawCursor = (void(__cdecl*)(int, int))0x0056FDB0;
 	inline auto& CarLod = *(int*)0x00802728;
 	inline auto& TireLOD = *(int*)0x0080272C;
 	inline auto& State = *(int*)0x008654A4;

@@ -49,6 +49,8 @@ namespace UI
 
 		Utilities::GetResource(IDR_FONT_ROBOTO, pData, szData);
 		io.Fonts->AddFontFromMemoryTTF(pData, szData, 16 * Globals::UIScale, &fontConfig);
+
+		io.MouseDrawCursor = true;
 	}
 
 	void InitStyles()

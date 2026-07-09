@@ -198,7 +198,6 @@
     <ClInclude Include="minhook\MinHook.h" />
     <ClInclude Include="minhook\trampoline.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="TimeOfDay.h" />
     <ClInclude Include="TrackPlayer.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="UIAboutTab.h" />
