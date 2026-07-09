@@ -52,34 +52,6 @@ namespace UI::Misc
 					ImGui::SliderFloat("Game speed", &Game::Speed, 0.0f, 1.0f, "%.3f");
 					ImGui::EndDisabled();
 				}
-
-				ImGui::TableSetColumnIndex(2);
-				{
-					ImGui::Text("");
-					ImGui::IncCursorPosX(20);
-					if (DrawButton("Remove tire skids"))
-					{
-						Game::KillSkidsOnRaceRestart();
-					}
-				}
-			}
-
-			ImGui::TableNextRow();
-			{
-				ImGui::TableSetColumnIndex(0);
-				{
-					ImGui::Text("");
-					ImGui::SliderFloat("Time", &TimeOfDay::instance->current_time_of_day, 0.0f, 1.0f, "%.3f");
-				}
-
-				float updateRate = TimeOfDay::instance->update_rate;
-				ImGui::TableSetColumnIndex(1);
-				{
-					if (DrawFloatInput("Update rate", "##Updaterate", &updateRate, 0.1))
-					{
-						TimeOfDay::instance->update_rate = updateRate;
-					}
-				}
 			}
 
 			ImGui::TableNextRow();
@@ -88,16 +60,6 @@ namespace UI::Misc
 				{
 					ImGui::Text("");
 					ImGui::SliderFloat("Steer angle", Game::FrontSteerAngle, -60.0, 60.0, "%.f");
-				}
-
-				float sunAzimuth = XMConvertToDegrees(TimeOfDay::instance->sun_azimuth);
-				ImGui::TableSetColumnIndex(1);
-				{
-					ImGui::Text("");
-					if (ImGui::SliderFloat("Sun azimuth", &sunAzimuth, 0.0f, 360.0f, "%.1f"))
-					{
-						TimeOfDay::instance->sun_azimuth = XMConvertToRadians(sunAzimuth);
-					}
 				}
 			}
 

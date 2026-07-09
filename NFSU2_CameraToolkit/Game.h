@@ -10,34 +10,24 @@ namespace Game
 {
 	inline auto Device = (LPDIRECT3DDEVICE9*)0x00870974;
 	inline auto& Window = *(HWND*)0x00870990;
-	inline auto EnableInput = (bool*)0x00920DE0;
-	inline auto DrawFE = (bool*)0x008F374C;
+	//inline auto EnableInput = (bool*)0x00920DE0;
+	inline auto DrawFE = (bool*)0x007FEE40;
 	inline auto ForceRain = (bool*)0x008A1D38;
-	inline auto& Speed = *(float*)0x00901B1C;
-	inline auto FrontSteerAngle = (float*)0x00905E20;
-	inline auto DrawCursor = (void(__cdecl*)(int, int))0x0056FDB0;
+	inline auto& Speed = *(float*)0x007A5730;
+	inline auto FrontSteerAngle = (float*)0x007F45A4;
+	//inline auto DrawCursor = (void(__cdecl*)(int, int))0x0056FDB0;
 	inline auto& CarLod = *(int*)0x00802728;
 	inline auto& TireLOD = *(int*)0x0080272C;
-	inline auto& State = *(int*)0x00925E90;
+	inline auto& State = *(int*)0x008654A4;
 	inline auto NotInFocus = (bool*)0x008709E0;
 	inline float& DeltaTime = *(float*)0x00865198;
 
 	inline auto eCreateLookAtMatrix = (int(__cdecl*)(void*, void*, void*, void*))0x005BA9A0;
-	inline auto KillSkidsOnRaceRestart = (int(__cdecl*)())0x007451A0;
 
 	inline bool InFocus()
 	{
 		return !*Game::NotInFocus;
 	}
-
-	struct CameraDof
-	{
-		float TargetDistance;
-		float FocalDistance;
-		float DepthOfField;
-		float DofFalloff;
-		float DofMaxIntensity;
-	};
 
 	struct __declspec(align(0x10)) CameraParams
 	{

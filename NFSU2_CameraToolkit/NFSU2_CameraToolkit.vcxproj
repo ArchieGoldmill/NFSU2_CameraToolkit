@@ -79,7 +79,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetExt>.asi</TargetExt>
-    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Program Files (x86)\Microsoft DirectX 9.0 SDK (Summer 2004)\lib;$(LibraryPath)</LibraryPath>
     <TargetName>NFSU2CameraToolkit</TargetName>
     <OutDir>..\mod\scripts</OutDir>
   </PropertyGroup>
@@ -174,11 +174,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CameraManager.h" />
-    <ClInclude Include="CarRenderConn.h" />
-    <ClInclude Include="CarRenderInfo.h" />
-    <ClInclude Include="eLightMaterial.h" />
+    <ClInclude Include="CarState.h" />
     <ClInclude Include="FEManager.h" />
-    <ClInclude Include="FERenderingCar.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Gamepad.h" />
     <ClInclude Include="Globals.h" />
@@ -201,7 +198,6 @@
     <ClInclude Include="minhook\MinHook.h" />
     <ClInclude Include="minhook\trampoline.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="RideInfo.h" />
     <ClInclude Include="TimeOfDay.h" />
     <ClInclude Include="TrackPlayer.h" />
     <ClInclude Include="UI.h" />
@@ -211,7 +207,6 @@
     <ClInclude Include="UIMiscTab.h" />
     <ClInclude Include="UITracksTab.h" />
     <ClInclude Include="Utilities.h" />
-    <ClInclude Include="VehicleRenderConn.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resource.aps" />

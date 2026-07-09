@@ -64,8 +64,8 @@ namespace ImGui
 
 namespace UI
 {
-	const auto ColorActive = ImVec4(VC(0), VC(234), VC(255), VC(255));
-	const auto ColorHover = ImVec4(VC(0), VC(234), VC(255), VC(170));
+	const auto ColorActive = ImVec4(VC(202), VC(241), VC(137), VC(255));
+	const auto ColorHover = ImVec4(VC(194), VC(216), VC(164), VC(170));
 	const auto ColorBlack = IM_COL32(0, 0, 0, 255);
 	const auto ColorBlackV = ImVec4(VC(0), VC(0), VC(0), VC(255));
 	const auto ColorWhite = IM_COL32(255, 255, 255, 255);

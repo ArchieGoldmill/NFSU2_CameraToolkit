@@ -53,7 +53,7 @@ namespace Globals
 	void ToggleDrawUI()
 	{
 		Globals::DrawUI = !Globals::DrawUI;
-		*Game::EnableInput = !Globals::DrawUI;
+		//*Game::EnableInput = !Globals::DrawUI;
 		ShowCursor(Globals::DrawUI);
 	}
 

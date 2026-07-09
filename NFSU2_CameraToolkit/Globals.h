@@ -77,8 +77,6 @@ namespace Globals
 	inline bool CameraOverride = false;
 	inline bool GameSpeedOverride = false;
 
-	inline Game::CameraDof Dof;
-
 	inline float UIScale = 1.0f;
 	extern Hotkeys HK;
 	extern CameraSettings Settings;

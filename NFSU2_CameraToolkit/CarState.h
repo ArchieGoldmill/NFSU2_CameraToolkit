@@ -1,12 +1,10 @@
 #pragma once
-#include "Game.h"
-#include "CarRenderInfo.h"
 
-struct VehicleRenderConn
+struct CarState
 {
-	static inline auto& Player = *(VehicleRenderConn***)0x009B37CC;
+	inline static CarState*& Player = *(CarState**)0x0089CCF8;
 
-	int vTable;
+	int field_0;
 	int field_4;
 	int field_8;
 	int field_C;
@@ -19,9 +17,13 @@ struct VehicleRenderConn
 	int field_28;
 	int field_2C;
 	int field_30;
-	XMMATRIX* Matrix;
+	int field_34;
 	int field_38;
 	int field_3C;
 	int field_40;
-	CarRenderInfo* pCarRenderInfo;
+	int field_44;
+	int field_48;
+	int field_4C;
+	XMMATRIX Matrix1;
+	XMMATRIX Matrix2;
 };

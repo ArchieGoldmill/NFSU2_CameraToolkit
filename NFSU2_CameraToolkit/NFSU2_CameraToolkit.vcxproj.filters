@@ -171,22 +171,7 @@
     <ClInclude Include="resource.h">
       <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="VehicleRenderConn.h">
-      <Filter>SDK</Filter>
-    </ClInclude>
     <ClInclude Include="TimeOfDay.h">
-      <Filter>SDK</Filter>
-    </ClInclude>
-    <ClInclude Include="RideInfo.h">
-      <Filter>SDK</Filter>
-    </ClInclude>
-    <ClInclude Include="eLightMaterial.h">
-      <Filter>SDK</Filter>
-    </ClInclude>
-    <ClInclude Include="CarRenderInfo.h">
-      <Filter>SDK</Filter>
-    </ClInclude>
-    <ClInclude Include="CarRenderConn.h">
       <Filter>SDK</Filter>
     </ClInclude>
     <ClInclude Include="FEManager.h">
@@ -195,10 +180,10 @@
     <ClInclude Include="IniWrapper.h">
       <Filter>ThirdParty\IniReader</Filter>
     </ClInclude>
-    <ClInclude Include="FERenderingCar.h">
+    <ClInclude Include="Game.h">
       <Filter>SDK</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
+    <ClInclude Include="CarState.h">
       <Filter>SDK</Filter>
     </ClInclude>
   </ItemGroup>

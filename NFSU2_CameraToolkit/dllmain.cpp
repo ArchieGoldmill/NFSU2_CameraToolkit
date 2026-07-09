@@ -10,9 +10,7 @@
 #include "UI.h"
 #include "Globals.h"
 #include "InputHandle.h"
-#include "VehicleRenderConn.h"
-#include "FERenderingCar.h"
-#include "CarRenderInfo.h"
+#include "CarState.h"
 
 #pragma comment(lib, "dxguid.lib")
 #pragma comment(lib, "XInput9_1_0.lib")
@@ -66,7 +64,6 @@ void InitUI(LPDIRECT3DDEVICE9 pDevice)
 
 			CreateDirectoryA("scripts\\CameraToolKit", NULL);
 			CreateDirectoryA("scripts\\CameraToolKit\\Tracks", NULL);
-			CreateDirectoryA("scripts\\CameraToolKit\\Materials", NULL);
 
 			wndProcHooked = true;
 		}
@@ -82,14 +79,6 @@ void InitUI(LPDIRECT3DDEVICE9 pDevice)
 		}
 
 		initUI = true;
-	}
-}
-
-void __cdecl DrawGameCursor(int a1, int a2)
-{
-	if (!Globals::DrawUI && !Globals::CameraOverride)
-	{
-		Game::DrawCursor(a1, a2);
 	}
 }
 
@@ -150,21 +139,21 @@ HRESULT __stdcall hookedReset(LPDIRECT3DDEVICE9 pDevice, D3DPRESENT_PARAMETERS* 
 
 XMMATRIX* GetCarTransform()
 {
+	static XMMATRIX carMatrix;
+
 	if (Game::State == 3)
 	{
-		static XMMATRIX carMatrix;
-		carMatrix = FERenderingCar::Instance()->BodyMatrix;
-		carMatrix.r[3] = FERenderingCar::Instance()->Position;
-		carMatrix.r[3].m128_f32[3] = 1;
-		return &carMatrix;
+		carMatrix = XMMatrixIdentity();
 	}
 
 	if (Game::State == 6)
 	{
-		return (*VehicleRenderConn::Player)->Matrix;
+		carMatrix = CarState::Player->Matrix2;
+		carMatrix.r[3] = CarState::Player->Matrix1.r[0];
+		carMatrix.r[3].m128_f32[3] = 1;
 	}
 
-	return NULL;
+	return &carMatrix;
 }
 
 typedef void(__thiscall* tSetCameraMatrix)(Game::Camera*, XMMATRIX*, float);
@@ -206,8 +195,6 @@ void __fastcall hSetCameraMatrix(Game::Camera* camera, int edx, XMMATRIX* matrix
 
 	oSetCameraMatrix(camera, matrix, elapsed);
 }
-
-void __stdcall DummyFuncStd(BOOL dummy) { return; }
 
 void Init()
 {
