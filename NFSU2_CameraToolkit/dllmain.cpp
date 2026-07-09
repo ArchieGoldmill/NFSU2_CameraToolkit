@@ -148,8 +148,8 @@ XMMATRIX* GetCarTransform()
 
 	if (Game::State == 6)
 	{
-		carMatrix = CarState::Player->Matrix2;
-		carMatrix.r[3] = CarState::Player->Matrix1.r[0];
+		carMatrix = CarState::Player->Matrix;
+		carMatrix.r[3] = CarState::Player->Position;
 		carMatrix.r[3].m128_f32[3] = 1;
 	}
 

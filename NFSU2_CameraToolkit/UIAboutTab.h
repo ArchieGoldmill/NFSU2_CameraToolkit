@@ -31,10 +31,10 @@ namespace UI::About
 		{
 			ShellExecute(0, 0, L"https://discord.gg/DxC6Fyf", 0, 0, SW_SHOW);
 		}
-		//ImGui::SameLine();
-		//if (ImGui::Button("NFS MODS", buttonSize))
-		//{
-		//	ShellExecute(0, 0, L"https://nfsmods.xyz/mod/4364", 0, 0, SW_SHOW);
-		//}
+		ImGui::SameLine();
+		if (ImGui::Button("NFS MODS", buttonSize))
+		{
+			ShellExecute(0, 0, L"https://nfsmods.xyz/mod/7664", 0, 0, SW_SHOW);
+		}
 	}
 }

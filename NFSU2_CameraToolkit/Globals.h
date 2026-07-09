@@ -66,7 +66,7 @@ struct CameraSettings
 
 namespace Globals
 {
-	static const char* ToolName = "Camera ToolKit v1.0";
+	static const char* ToolName = "NFSU2 - Camera ToolKit v1.0";
 
 	inline HINSTANCE DllHandle;
 	inline HWND Window = NULL;

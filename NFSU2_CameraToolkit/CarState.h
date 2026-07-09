@@ -24,6 +24,9 @@ struct CarState
 	int field_44;
 	int field_48;
 	int field_4C;
-	XMMATRIX Matrix1;
-	XMMATRIX Matrix2;
+	XMVECTOR Position;
+	XMVECTOR unk1;
+	XMVECTOR unk2;
+	XMVECTOR unk3;
+	XMMATRIX Matrix;
 };
