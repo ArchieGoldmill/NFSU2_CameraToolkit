@@ -171,9 +171,6 @@
     <ClInclude Include="resource.h">
       <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="FEManager.h">
-      <Filter>SDK</Filter>
-    </ClInclude>
     <ClInclude Include="IniWrapper.h">
       <Filter>ThirdParty\IniReader</Filter>
     </ClInclude>

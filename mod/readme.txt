@@ -37,14 +37,6 @@ Roll camera right - O
 Increase FOV - -
 Decrease FOV - =
 
-Toggle checked - Num 5
-Toggle hood - Num 8
-Toggle left door - Num 4
-Toggle right door - Num 6
-Toggle trunk - Num 2
-Toggle left window - Num 7
-Toggle right window - Num 9
-
 GamePad:
 Move camera - Left Stick
 Look around - Right Stick

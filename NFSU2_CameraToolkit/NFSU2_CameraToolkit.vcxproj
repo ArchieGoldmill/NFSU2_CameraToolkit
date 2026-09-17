@@ -175,7 +175,6 @@
   <ItemGroup>
     <ClInclude Include="CameraManager.h" />
     <ClInclude Include="CarState.h" />
-    <ClInclude Include="FEManager.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Gamepad.h" />
     <ClInclude Include="Globals.h" />
